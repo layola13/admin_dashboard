@@ -1,0 +1,268 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+      .form-input,
+      .form-textarea,
+      .form-select {
+        border-color: #e5e7eb;border-radius: 0.5rem;transition: all 0.15s ease-in-out;
+      }
+      .form-input:focus,
+      .form-textarea:focus,
+      .form-select:focus {
+        border-color: #93c5fd;box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.5);}
+      .slider-thumb::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #3b82f6;cursor: pointer;
+        border-radius: 9999px;
+      }
+      .slider-thumb::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        background: #3b82f6;
+        cursor: pointer;
+        border-radius: 9999px;
+        border: none;
+      }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800" style="font-family: Inter, 'Noto Sans', sans-serif;">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(106,118,129)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-6 sm:px-10 py-4 bg-white shadow-sm">
+<div class="flex items-center gap-4 text-slate-900">
+<div class="size-7 text-blue-600">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">Agent Platform</h2>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-blue-600 text-sm font-bold leading-normal border-b-2 border-blue-600 pb-1" href="#">Agents</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal" href="#">Hardware</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal" href="#">Users</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-800 transition-colors">
+<span class="material-icons text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-200 hover:border-blue-500 transition-all" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKVE5R_oXZhi9DxOo_aI3SN4l8nucB_i3KuaVoIYYkeZ_X9ayqcyOQjSYAKeOCQ7RFFnYrndPsAN3caoAIAS1skw6YOApleDwqXtEPYsPsO0J-H1Bbtqs64jBzVk2EBmyED-R4_fBz2tYQBjwqSy9gzR76XdjmIB8vRGZdVVoKHIsVcJCWcte2eXWry_X_BpW14deeTplhMlkwofKxkr4Q7FYfmB8HUIDu0xlwjPSZ3MGzX6T8VnHkCqFlHdIUK1ug8Tf-ZpmgjaST");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-3xl py-5">
+<div class="flex flex-wrap justify-between items-center gap-3 p-4 mb-6">
+<h1 class="text-slate-900 text-3xl font-bold leading-tight min-w-72">Add Agent</h1>
+</div>
+<form class="space-y-8">
+<section class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-slate-800 text-xl font-semibold leading-tight tracking-[-0.015em] mb-6 border-b border-slate-200 pb-4">Basic Information</h3>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-name">Name</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-name" placeholder="E.g., Customer Support Bot" value=""/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-description">Description</label>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white min-h-32 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-description" placeholder="Describe the agent's purpose and capabilities"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-avatar">Avatar</label>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-300 border-dashed rounded-md">
+<div class="space-y-1 text-center">
+<svg aria-hidden="true" class="mx-auto h-12 w-12 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 48 48">
+<path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<div class="flex text-sm text-slate-600">
+<label class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500" for="agent-avatar-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="agent-avatar-upload" name="agent-avatar-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs text-slate-500">PNG, JPG, GIF up to 10MB</p>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-type">Type</label>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 bg-[image:--select-button-svg] bg-no-repeat bg-right_0.75rem_center placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-type">
+<option disabled="" selected="" value="">Select agent type</option>
+<option value="chatbot">Chatbot</option>
+<option value="voice_assistant">Voice Assistant</option>
+<option value="task_automation">Task Automation</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-tags">Tags</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-tags" placeholder="Add tags (e.g., support, sales, internal)" value=""/>
+<p class="mt-1 text-xs text-slate-500">Separate tags with commas.</p>
+</div>
+</div>
+</section>
+<section class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-slate-800 text-xl font-semibold leading-tight tracking-[-0.015em] mb-6 border-b border-slate-200 pb-4">System Settings</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-role">Role</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-role" placeholder="E.g., Helpful Assistant" value=""/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-personality">Personality</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-personality" placeholder="E.g., Friendly and Concise" value=""/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-knowledge-base">Knowledge Base</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-knowledge-base" placeholder="Link to or describe knowledge source" value=""/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-response-mode">Response Mode</label>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 bg-[image:--select-button-svg] bg-no-repeat bg-right_0.75rem_center placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-response-mode">
+<option disabled="" selected="" value="">Select response mode</option>
+<option value="active">Active</option>
+<option value="passive">Passive</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-context-memory">Context Memory Length</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-context-memory" placeholder="E.g., 10 (turns)" type="number" value=""/>
+</div>
+</div>
+</section>
+<section class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-slate-800 text-xl font-semibold leading-tight tracking-[-0.015em] mb-6 border-b border-slate-200 pb-4">Voice Settings</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-voice-model">Voice Model</label>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 bg-[image:--select-button-svg] bg-no-repeat bg-right_0.75rem_center placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-voice-model">
+<option disabled="" selected="" value="">Select voice model</option>
+<option value="alloy">Alloy</option>
+<option value="echo">Echo</option>
+<option value="fable">Fable</option>
+<option value="onyx">Onyx</option>
+<option value="nova">Nova</option>
+<option value="shimmer">Shimmer</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-voice-tone">Voice Tone</label>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 bg-[image:--select-button-svg] bg-no-repeat bg-right_0.75rem_center placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-voice-tone">
+<option disabled="" selected="" value="">Select voice tone</option>
+<option value="neutral">Neutral</option>
+<option value="friendly">Friendly</option>
+<option value="professional">Professional</option>
+<option value="energetic">Energetic</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="speech-rate-slider">Speech Rate <span class="text-slate-500 text-xs">(0.5x - 2.0x)</span></label>
+<div class="flex items-center gap-4">
+<input class="slider-thumb w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600" id="speech-rate-slider" max="2" min="0.5" step="0.1" type="range" value="1"/>
+<span class="text-sm text-slate-600 w-10 text-right">1.0x</span>
+</div>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="volume-slider">Volume <span class="text-slate-500 text-xs">(0% - 100%)</span></label>
+<div class="flex items-center gap-4">
+<input class="slider-thumb w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600" id="volume-slider" max="100" min="0" step="1" type="range" value="75"/>
+<span class="text-sm text-slate-600 w-10 text-right">75%</span>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-language">Language</label>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 bg-[image:--select-button-svg] bg-no-repeat bg-right_0.75rem_center placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-language">
+<option disabled="" selected="" value="">Select language</option>
+<option value="en-US">English (US)</option>
+<option value="en-GB">English (UK)</option>
+<option value="es-ES">Spanish</option>
+<option value="fr-FR">French</option>
+</select>
+</div>
+</div>
+</section>
+<section class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-slate-800 text-xl font-semibold leading-tight tracking-[-0.015em] mb-6 border-b border-slate-200 pb-4">LLM Settings</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-llm-model">Model</label>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 bg-[image:--select-button-svg] bg-no-repeat bg-right_0.75rem_center placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-llm-model">
+<option disabled="" selected="" value="">Select LLM model</option>
+<option value="gpt-4">GPT-4</option>
+<option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+<option value="claude-2">Claude 2</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="temperature-slider">Temperature <span class="text-slate-500 text-xs">(0.0 - 2.0)</span></label>
+<div class="flex items-center gap-4">
+<input class="slider-thumb w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600" id="temperature-slider" max="2" min="0" step="0.1" type="range" value="0.7"/>
+<span class="text-sm text-slate-600 w-10 text-right">0.7</span>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-max-tokens">Max Tokens</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-max-tokens" placeholder="E.g., 2048" type="number" value=""/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-top-p">Top-p <span class="text-slate-500 text-xs">(0.0 - 1.0)</span></label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-top-p" max="1" min="0" placeholder="E.g., 0.9" step="0.01" type="number" value=""/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-frequency-penalty">Frequency Penalty <span class="text-slate-500 text-xs">(0.0 - 2.0)</span></label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-frequency-penalty" max="2" min="0" placeholder="E.g., 0.0" step="0.01" type="number" value=""/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 pb-1.5" for="agent-presence-penalty">Presence Penalty <span class="text-slate-500 text-xs">(0.0 - 2.0)</span></label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 focus:outline-0 focus:ring-0 bg-white h-12 placeholder:text-slate-400 p-[15px] text-sm font-normal leading-normal" id="agent-presence-penalty" max="2" min="0" placeholder="E.g., 0.0" step="0.01" type="number" value=""/>
+</div>
+</div>
+</section>
+<div class="flex justify-end gap-4 pt-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium leading-normal tracking-[0.015em] transition-colors" type="button">
+<span class="truncate">Cancel</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium leading-normal tracking-[0.015em] transition-colors" type="submit">
+<span class="truncate">Add Agent</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+</div>
+</div>
+<script>
+      // Script to update slider value display
+      const sliders = [
+        { id: 'speech-rate-slider', suffix: 'x', fixed: 1 },
+        { id: 'volume-slider', suffix: '%', fixed: 0 },
+        { id: 'temperature-slider', suffix: '', fixed: 1 }
+      ];
+      sliders.forEach(sliderConfig => {
+        const slider = document.getElementById(sliderConfig.id);
+        if (slider) {
+          const displayValue = slider.nextElementSibling; // Assumes span is the next sibling
+          slider.addEventListener('input', (event) => {
+            displayValue.textContent = parseFloat(event.target.value).toFixed(sliderConfig.fixed) + sliderConfig.suffix;
+          });
+          // Initialize display
+          displayValue.textContent = parseFloat(slider.value).toFixed(sliderConfig.fixed) + sliderConfig.suffix;
+        }
+      });
+    </script>
+
+<div style="position: fixed; bottom: 10px; left: 10px; right: 10px; background-color: #f0f0f0; padding: 10px; border-top: 1px solid #ccc; display: flex; justify-content: space-between; z-index: 1000;">
+  <a href="page_03.html" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Previous</a>
+  <a href="page_05.html" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Next</a>
+</div>
+</body></html>
