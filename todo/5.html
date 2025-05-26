@@ -1,0 +1,190 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .status-online {
+      color: #16a34a;
+      background-color: #dcfce7;
+    }
+    .status-offline {
+      color: #dc2626;
+      background-color: #fee2e2;
+    }
+    .status-linking {
+      color: #ca8a04;
+      background-color: #fef9c3;
+    }:focus-visible {
+      outline: 2px solid theme('colors.blue.500');
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white px-8 py-4 shadow-sm">
+<div class="flex items-center gap-3 text-slate-900">
+<svg class="size-7 text-blue-600" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-slate-900 text-xl font-semibold tracking-tight">AgentCloud</h2>
+</div>
+<nav class="flex items-center gap-4">
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors" href="#">Agents</a>
+<a class="text-blue-600 text-sm font-semibold transition-colors border-b-2 border-blue-600 pb-1" href="#">Devices</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors" href="#">Playground</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors" href="#">Docs</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
+<span class="material-icons-outlined text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-200" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-CrDif7CnAGxRWrUnSRDc4hjT38y8Kjl-zAyl_yK-J7PLbe71BJeR5Spqk63FfIAZEuovha7wAhW4DYu6WlPAviYjDLryk4HfgwrAcxzJrK0QEfvnMtUJgBocaXDuimXeAAGwl4idNCrtMysJzWVj1aFsj9csSVOCqH6Nnr2ArForc7sbb1RRfF_8mAHV42HhDfaaw4W6rHN7J1NJvkrwZdsn1UlEs4lHZVvNsimUXpKkC0jS6u30G33xtvOzR9V6Xkp4e_Xbo4fD");'></div>
+</div>
+</header>
+<main class="flex-1 px-8 py-10 md:px-16 lg:px-24">
+<div class="mx-auto max-w-7xl">
+<div class="mb-8 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+<h1 class="text-slate-900 text-3xl font-semibold tracking-tight">My Devices</h1>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 bg-blue-600 text-white text-sm font-medium leading-normal shadow-sm hover:bg-blue-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+<span class="material-icons-outlined text-lg">add_circle_outline</span>
+<span>Add New Device</span>
+</button>
+</div>
+<div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg @container">
+<table class="min-w-full divide-y divide-slate-200">
+<thead class="bg-slate-50">
+<tr>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600" scope="col">Device Name</th>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600 hidden @[640px]:table-cell" scope="col">Model</th>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600 hidden @[768px]:table-cell" scope="col">Serial Number</th>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600 hidden @[1024px]:table-cell" scope="col">Activation Date</th>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600" scope="col">Status</th>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600 hidden @[1280px]:table-cell" scope="col">Linked Agent</th>
+<th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-600" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 bg-white">
+<tr>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium text-slate-900">Living Room Hub</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[640px]:table-cell">SmartHome Hub X200</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[768px]:table-cell">SN-HUBX200-001</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1024px]:table-cell">2023-03-15</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm">
+<span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold status-online">
+<span class="mr-1.5 inline-block size-2 rounded-full bg-green-500"></span>
+                      Online
+                    </span>
+</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1280px]:table-cell">Home Assistant v3.1</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium">
+<div class="flex items-center gap-x-4">
+<button class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">visibility</span> Details
+                      </button>
+<button class="text-amber-600 hover:text-amber-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">link_off</span> Unlink
+                      </button>
+<button class="text-slate-600 hover:text-slate-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">settings</span> Settings
+                      </button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium text-slate-900">Kitchen Smart Display</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[640px]:table-cell">KitchenMate Pro</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[768px]:table-cell">SN-KMPRO-042</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1024px]:table-cell">2023-06-01</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm">
+<span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold status-offline">
+<span class="mr-1.5 inline-block size-2 rounded-full bg-red-500"></span>
+                      Offline
+                    </span>
+</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1280px]:table-cell">Recipe Bot v1.5</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium">
+<div class="flex items-center gap-x-4">
+<button class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">visibility</span> Details
+                      </button>
+<button class="text-green-600 hover:text-green-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">link</span> Link Agent
+                      </button>
+<button class="text-slate-600 hover:text-slate-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">settings</span> Settings
+                      </button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium text-slate-900">Office Climate Sensor</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[640px]:table-cell">EnviroSense Mini</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[768px]:table-cell">SN-ESMINI-105</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1024px]:table-cell">2023-09-20</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm">
+<span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold status-linking">
+<span class="mr-1.5 inline-block size-2 rounded-full bg-yellow-500"></span>
+                      Linking...
+                    </span>
+</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1280px]:table-cell">Work Comfort AI</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium">
+<div class="flex items-center gap-x-4">
+<button class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">visibility</span> Details
+                      </button>
+<button class="text-slate-400 cursor-not-allowed flex items-center gap-1" disabled="">
+<span class="material-icons-outlined text-base">link_off</span> Unlink
+                      </button>
+<button class="text-slate-600 hover:text-slate-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">settings</span> Settings
+                      </button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium text-slate-900">Garage Door Opener</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[640px]:table-cell">SecureEntry G5</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[768px]:table-cell">SN-SEG5-007</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1024px]:table-cell">2024-01-10</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm">
+<span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold status-online">
+<span class="mr-1.5 inline-block size-2 rounded-full bg-green-500"></span>
+                      Online
+                    </span>
+</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm text-slate-600 hidden @[1280px]:table-cell">Access Guardian Prime</td>
+<td class="whitespace-nowrap px-6 py-5 text-sm font-medium">
+<div class="flex items-center gap-x-4">
+<button class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">visibility</span> Details
+                      </button>
+<button class="text-amber-600 hover:text-amber-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">link_off</span> Unlink
+                      </button>
+<button class="text-slate-600 hover:text-slate-800 transition-colors flex items-center gap-1">
+<span class="material-icons-outlined text-base">settings</span> Settings
+                      </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-200 bg-white px-8 py-6 text-center">
+<p class="text-sm text-slate-500">© 2024 AgentCloud. All rights reserved.</p>
+</footer>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,162 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<meta charset="utf-8"/>
+<style>
+      .status-active {
+        background-color: #e6f7f2;color: #00875a;}
+      .status-inactive {
+        background-color: #fff0f0;color: #de350b;}
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;font-size: 0.75rem;font-weight: 500;}
+      .status-badge::before {
+        content: '';
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+      }
+      .status-active::before {
+        background-color: #00875a;}
+      .status-inactive::before {
+        background-color: #de350b;}
+    </style>
+</head>
+<body class="bg-slate-50" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white px-6 py-3">
+<div class="flex items-center gap-3 text-slate-900">
+<div class="size-6 text-blue-600">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-xl font-semibold leading-tight tracking-tight">AgentCloud</h2>
+</div>
+<nav class="flex items-center gap-3">
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal px-3 py-1.5 rounded-md transition-colors" href="#">Overview</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal px-3 py-1.5 rounded-md transition-colors" href="#">Agents</a>
+<a class="text-blue-600 bg-blue-50 text-sm font-semibold leading-normal px-3 py-1.5 rounded-md" href="#">Hardware</a>
+<a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal px-3 py-1.5 rounded-md transition-colors" href="#">Users</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center rounded-full h-9 w-9 hover:bg-slate-100 text-slate-500 hover:text-slate-700 transition-colors">
+<div class="text-slate-500" data-icon="Bell" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border border-slate-200" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARvems-Fn2tGhraLswgw8xUB8qEWNuSEKhW56gnWR-d-I-SecWUpLKbrqb21p9RC42Kpl7LAIvCQI-95RxHYfK6uaRTJMyRXh8Um93xix0vKq5hIRnBDdODdH98FVuwQj6QwygmVp73xIobK5Qld5qtk-Za6Mbf0zA9VpjoSM7nBsNi89cmxbyxoXHPkW7GDhI0Pc5MVCVvzxvPVEBahdABcJjC_Z-mJeeASpmHNOQfXj63bC9TNw3r7uw1CF3i2gT4jMB96ftoM23");'></div>
+</div>
+</header>
+<main class="flex-1 px-8 md:px-16 lg:px-24 py-8">
+<div class="mx-auto max-w-6xl">
+<div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+<h1 class="text-slate-900 text-3xl font-semibold leading-tight tracking-tight">Hardware Management</h1>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
+<svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+</svg>
+<span>Add Hardware</span>
+</button>
+</div>
+<div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm @container">
+<table class="w-full">
+<thead class="bg-slate-50">
+<tr>
+<th class="table-header px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500 w-1/5">ID</th>
+<th class="table-header px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500 w-1/5">User</th>
+<th class="table-header px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500 w-1/5">Linked Agent</th>
+<th class="table-header px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500 w-1/5">Status</th>
+<th class="table-header px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500 w-1/5">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-sm text-slate-700">HW001</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Alice Johnson</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Agent Alpha</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="status-badge status-active">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<button class="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline">View Details</button>
+<button class="ml-2 text-slate-500 hover:text-slate-700 text-sm font-medium hover:underline">Unlink</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-sm text-slate-700">HW002</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Bob Williams</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Agent Beta</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="status-badge status-inactive">Inactive</span>
+</td>
+<td class="px-4 py-3.5">
+<button class="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline">View Details</button>
+<button class="ml-2 text-slate-500 hover:text-slate-700 text-sm font-medium hover:underline">Link</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-sm text-slate-700">HW003</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Charlie Davis</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Agent Gamma</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="status-badge status-active">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<button class="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline">View Details</button>
+<button class="ml-2 text-slate-500 hover:text-slate-700 text-sm font-medium hover:underline">Unlink</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-sm text-slate-700">HW004</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Diana Evans</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Agent Delta</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="status-badge status-active">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<button class="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline">View Details</button>
+<button class="ml-2 text-slate-500 hover:text-slate-700 text-sm font-medium hover:underline">Unlink</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-sm text-slate-700">HW005</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Ethan Foster</td>
+<td class="px-4 py-3.5 text-sm text-slate-700">Agent Epsilon</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="status-badge status-inactive">Inactive</span>
+</td>
+<td class="px-4 py-3.5">
+<button class="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline">View Details</button>
+<button class="ml-2 text-slate-500 hover:text-slate-700 text-sm font-medium hover:underline">Link</button>
+</td>
+</tr>
+</tbody>
+</table>
+<style>
+                @container (max-width: 768px) {
+                  .table-header {}
+                  .table-header:nth-child(3), .table-header:nth-child(4) {
+                    display:none;}
+                   td:nth-child(3), td:nth-child(4) {
+                    display:none;
+                  }
+                }
+              </style>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

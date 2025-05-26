@@ -1,0 +1,91 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<meta charset="utf-8"/>
+</head>
+<body class="bg-gray-100">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style="--checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 px-10 py-4 bg-white shadow-sm">
+<div class="flex items-center gap-3 text-gray-800">
+<div class="size-6 text-[#0b80ee]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">AgentCloud</h2>
+</div>
+</header>
+<div class="flex flex-1 justify-center items-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="layout-content-container flex flex-col w-full max-w-md space-y-8 bg-white p-8 sm:p-10 rounded-xl shadow-2xl">
+<div class="text-center">
+<h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Create your account</h2>
+<p class="mt-2 text-sm text-gray-600">
+                Join AgentCloud to manage your AI agents and hardware.
+              </p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700" for="username">Username</label>
+<div class="mt-1">
+<input class="appearance-none block w-full px-4 py-3 rounded-lg border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-[#0b80ee] focus:border-[#0b80ee] sm:text-sm transition duration-150 ease-in-out" id="username" name="username" placeholder="Enter your username" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="email">Email address</label>
+<div class="mt-1">
+<input autocomplete="email" class="appearance-none block w-full px-4 py-3 rounded-lg border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-[#0b80ee] focus:border-[#0b80ee] sm:text-sm transition duration-150 ease-in-out" id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="password">Password</label>
+<div class="mt-1">
+<input autocomplete="new-password" class="appearance-none block w-full px-4 py-3 rounded-lg border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-[#0b80ee] focus:border-[#0b80ee] sm:text-sm transition duration-150 ease-in-out" id="password" name="password" placeholder="Enter your password" required="" type="password"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="confirm-password">Confirm Password</label>
+<div class="mt-1">
+<input autocomplete="new-password" class="appearance-none block w-full px-4 py-3 rounded-lg border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-[#0b80ee] focus:border-[#0b80ee] sm:text-sm transition duration-150 ease-in-out" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required="" type="password"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="phone">Phone Number <span class="text-gray-500">(Optional)</span></label>
+<div class="mt-1">
+<input class="appearance-none block w-full px-4 py-3 rounded-lg border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-[#0b80ee] focus:border-[#0b80ee] sm:text-sm transition duration-150 ease-in-out" id="phone" name="phone" placeholder="Enter your phone number" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="captcha">CAPTCHA <span class="text-gray-500">(Optional)</span></label>
+<div class="mt-1 flex items-center space-x-2">
+<input class="appearance-none block w-full px-4 py-3 rounded-lg border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-[#0b80ee] focus:border-[#0b80ee] sm:text-sm transition duration-150 ease-in-out" id="captcha" name="captcha" placeholder="Enter CAPTCHA" type="text"/>
+<div class="bg-gray-200 p-3 rounded-lg text-gray-700 text-sm italic">CAPTCHA Image</div>
+</div>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-[#0b80ee] border-gray-300 rounded focus:ring-[#0b80ee] checked:bg-[#0b80ee] checked:border-transparent checked:bg-[image:--checkbox-tick-svg]" id="terms" name="terms" required="" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900" for="terms">
+                  I agree to the <a class="font-medium text-[#0b80ee] hover:text-[#005cb9]" href="#">terms and conditions</a>
+</label>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-[#0b80ee] hover:bg-[#005cb9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0b80ee] transition duration-150 ease-in-out" type="submit">
+                  Register
+                </button>
+</div>
+</form>
+<p class="mt-6 text-center text-sm text-gray-600">
+              Already have an account?
+              <a class="font-medium text-[#0b80ee] hover:text-[#005cb9]" href="/login">
+                Log in
+              </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

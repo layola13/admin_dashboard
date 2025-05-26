@@ -1,0 +1,172 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(96,117,138)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 bg-white px-10 py-4 shadow-sm">
+<div class="flex items-center gap-3 text-slate-900">
+<svg class="text-primary-500 size-8 text-[#0c7ff2]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+<h2 class="text-slate-900 text-xl font-semibold leading-tight">AgentHub</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-2">
+<a class="text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium leading-normal transition-colors" href="#">Agents</a>
+<a class="text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium leading-normal transition-colors" href="#">Hardware</a>
+<a class="text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium leading-normal transition-colors" href="#">Users</a>
+<a class="text-[#0c7ff2] bg-slate-100 rounded-md px-3 py-2 text-sm font-semibold leading-normal" href="#">LLMs</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center rounded-full h-10 w-10 hover:bg-slate-100 text-slate-500 hover:text-slate-700 transition-colors">
+<span class="material-icons text-2xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCN3iR9gkJBQ3dHdX14M1Ahk3NDngYjI5J40CKBLFhFnJEeNlcJXJu-y9Jy3BdJOWLiRb5kie3meT5dEL4osyVZPHTShDTXxlEuFiHvAt4LT8lcQrNtpoGYzx40-k5J4XnDybwVvzjKvwblJa_LfSTRwihbsrxXqkq1QM6s_Ccuvv8_wbeElmkDiBkbqXlpM4ipXN_-aNY6z9REGy31DsoDfYs1ZZCY3eu3Nc5WmpF31lK5RVGq_xhFtjGVSKfAJmd2TNU4t_iABA7F");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-10 py-8">
+<div class="max-w-5xl mx-auto">
+<header class="mb-8">
+<h1 class="text-slate-900 text-3xl font-semibold leading-tight tracking-tight">LLM Configuration</h1>
+<p class="text-slate-600 text-base font-normal leading-normal mt-1">Manage and configure Large Language Models for AI agents.</p>
+</header>
+<section class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+<h2 class="text-slate-800 text-xl font-semibold leading-tight mb-6">Add New Provider</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+<div class="flex flex-col">
+<label class="text-slate-700 text-sm font-medium mb-1.5" for="providerSelect">Provider</label>
+<select class="form-select w-full rounded-lg border-slate-300 focus:border-[#0c7ff2] focus:ring-[#0c7ff2]/50 text-slate-700 h-11 placeholder:text-slate-400 px-3.5 text-base font-normal" id="providerSelect">
+<option value="">Select Provider</option>
+<option value="gemini">Gemini</option>
+<option value="openai">OpenAI</option>
+<option value="anthropic">Anthropic</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="text-slate-700 text-sm font-medium mb-1.5" for="apiKeyInput">API Key</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#0c7ff2] focus:ring-[#0c7ff2]/50 text-slate-700 h-11 placeholder:text-slate-400 px-3.5 text-base font-normal" id="apiKeyInput" placeholder="Enter API Key" type="password"/>
+</div>
+<div class="md:col-span-2 flex justify-start mt-2">
+<button class="flex items-center justify-center gap-2 rounded-lg h-11 px-5 bg-[#0c7ff2] text-white text-sm font-semibold leading-normal hover:bg-[#0a68c4] transition-colors" type="submit">
+<span class="material-icons text-lg">add_circle_outline</span>
+                  Add Provider
+                </button>
+</div>
+</form>
+</section>
+<section class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+<h2 class="text-slate-800 text-xl font-semibold leading-tight mb-6">Existing Providers</h2>
+<div class="overflow-x-auto @container">
+<table class="w-full min-w-[600px]">
+<thead>
+<tr class="border-b border-slate-200">
+<th class="px-4 py-3.5 text-left text-slate-600 text-xs font-medium uppercase tracking-wider">Provider</th>
+<th class="px-4 py-3.5 text-left text-slate-600 text-xs font-medium uppercase tracking-wider">Status</th>
+<th class="px-4 py-3.5 text-left text-slate-600 text-xs font-medium uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200">
+<tr>
+<td class="px-4 py-4 whitespace-nowrap text-slate-700 text-sm font-medium">Gemini</td>
+<td class="px-4 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="material-icons text-sm mr-1">check_circle</span>
+                        Active
+                      </span>
+</td>
+<td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-slate-600 hover:text-[#0c7ff2] transition-colors text-sm">
+<span class="material-icons text-base">edit</span>Edit
+                        </button>
+<button class="flex items-center gap-1 text-slate-600 hover:text-[#0c7ff2] transition-colors text-sm">
+<span class="material-icons text-base">science</span>Test
+                        </button>
+<button class="flex items-center gap-1 text-red-500 hover:text-red-700 transition-colors text-sm">
+<span class="material-icons text-base">delete</span>Delete
+                        </button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-4 py-4 whitespace-nowrap text-slate-700 text-sm font-medium">OpenAI</td>
+<td class="px-4 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800">
+<span class="material-icons text-sm mr-1">pause_circle</span>
+                        Inactive
+                      </span>
+</td>
+<td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-slate-600 hover:text-[#0c7ff2] transition-colors text-sm">
+<span class="material-icons text-base">edit</span>Edit
+                        </button>
+<button class="flex items-center gap-1 text-slate-600 hover:text-[#0c7ff2] transition-colors text-sm">
+<span class="material-icons text-base">science</span>Test
+                        </button>
+<button class="flex items-center gap-1 text-red-500 hover:text-red-700 transition-colors text-sm">
+<span class="material-icons text-base">delete</span>Delete
+                        </button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-4 py-4 whitespace-nowrap text-slate-700 text-sm font-medium">Anthropic</td>
+<td class="px-4 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="material-icons text-sm mr-1">check_circle</span>
+                        Active
+                      </span>
+</td>
+<td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-slate-600 hover:text-[#0c7ff2] transition-colors text-sm">
+<span class="material-icons text-base">edit</span>Edit
+                        </button>
+<button class="flex items-center gap-1 text-slate-600 hover:text-[#0c7ff2] transition-colors text-sm">
+<span class="material-icons text-base">science</span>Test
+                        </button>
+<button class="flex items-center gap-1 text-red-500 hover:text-red-700 transition-colors text-sm">
+<span class="material-icons text-base">delete</span>Delete
+                        </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-10 py-6 border-t border-slate-200 bg-white">
+<p class="text-center text-sm text-slate-500">© 2024 AgentHub. All rights reserved.</p>
+</footer>
+</div>
+</div>
+
+</body></html>

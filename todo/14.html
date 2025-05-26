@@ -1,0 +1,216 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Agent Popularity Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .active-nav-link {
+      color: #1e40af;border-bottom: 2px solid #1e40af;
+      padding-bottom: 2px;}
+    .nav-link:hover {
+      color: #2563eb;}
+  </style>
+</head>
+<body class="bg-slate-50" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white px-6 sm:px-10 py-4 shadow-sm">
+<div class="flex items-center gap-6 sm:gap-8">
+<div class="flex items-center gap-3 sm:gap-4 text-slate-800">
+<div class="size-6 text-blue-600">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-slate-900 text-xl font-bold leading-tight tracking-tight">Agent Platform</h1>
+</div>
+<nav class="hidden sm:flex items-center gap-6">
+<a class="text-slate-700 text-sm font-medium leading-normal nav-link active-nav-link" href="#">Dashboard</a>
+<a class="text-slate-700 text-sm font-medium leading-normal nav-link" href="#">Agents</a>
+<a class="text-slate-700 text-sm font-medium leading-normal nav-link" href="#">Hardware</a>
+<a class="text-slate-700 text-sm font-medium leading-normal nav-link" href="#">Users</a>
+</nav>
+</div>
+<div class="flex items-center gap-3 sm:gap-4">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-500 flex border border-slate-300 bg-white items-center justify-center pl-3 rounded-l-lg border-r-0">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-blue-500 border border-slate-300 bg-white focus:border-blue-500 h-full placeholder:text-slate-500 px-3 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-slate-100 hover:bg-slate-200 text-slate-700">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-blue-500 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0rWNiLZJL1wgVwxwfJwQzu0_610n812bc_Wli2Eucye3NvK2yY6LWlPOm3ZDJ8LIGWfDJvJ6hC6Ae8KiQtIRCr4tflM9ccYkidXcUDefALX-_THMYefvv9vUb29SRbhpSdBkzJ9dTIiDA8TFIkRM21aWR4ATTeqsr5X0tnTNCUgeja4J-hmhDS8KOjdpj0SFmvY2XJI4sOh866QzCEWXqqr_GgAgbtD_N2Ftph2NO1voBMXKiyobAskRrI0vbKm_N-dgO1E1xHPOF");'></div>
+</div>
+</header>
+<main class="px-6 sm:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-6xl">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<h1 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight">Agent Popularity Dashboard</h1>
+</div>
+<section class="mb-8">
+<h2 class="text-slate-800 text-xl sm:text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2">Agent Usage Leaderboard</h2>
+<div class="px-4 py-3 @container">
+<div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg">
+<table class="w-full">
+<thead class="bg-slate-50">
+<tr>
+<th class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-120 px-4 py-3 text-left text-slate-600 w-1/12 text-xs sm:text-sm font-medium uppercase tracking-wider">Rank</th>
+<th class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-240 px-4 py-3 text-left text-slate-600 w-8/12 text-xs sm:text-sm font-medium uppercase tracking-wider">Agent Name</th>
+<th class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-360 px-4 py-3 text-left text-slate-600 w-3/12 text-xs sm:text-sm font-medium uppercase tracking-wider">Usage Count</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200">
+<tr class="hover:bg-slate-50">
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-120 h-16 px-4 py-3 text-slate-500 text-sm">1</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Alpha</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-360 h-16 px-4 py-3 text-slate-500 text-sm">1,500</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-120 h-16 px-4 py-3 text-slate-500 text-sm">2</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Beta</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-360 h-16 px-4 py-3 text-slate-500 text-sm">1,200</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-120 h-16 px-4 py-3 text-slate-500 text-sm">3</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Gamma</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-360 h-16 px-4 py-3 text-slate-500 text-sm">1,000</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-120 h-16 px-4 py-3 text-slate-500 text-sm">4</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Delta</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-360 h-16 px-4 py-3 text-slate-500 text-sm">900</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-120 h-16 px-4 py-3 text-slate-500 text-sm">5</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Epsilon</td>
+<td class="table-7666888b-88b8-40d0-9daf-150174688bc3-column-360 h-16 px-4 py-3 text-slate-500 text-sm">800</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-slate-800 text-xl sm:text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2">Agent Rating Leaderboard</h2>
+<div class="px-4 py-3 @container">
+<div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg">
+<table class="w-full">
+<thead class="bg-slate-50">
+<tr>
+<th class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-120 px-4 py-3 text-left text-slate-600 w-1/12 text-xs sm:text-sm font-medium uppercase tracking-wider">Rank</th>
+<th class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-240 px-4 py-3 text-left text-slate-600 w-8/12 text-xs sm:text-sm font-medium uppercase tracking-wider">Agent Name</th>
+<th class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-360 px-4 py-3 text-left text-slate-600 w-3/12 text-xs sm:text-sm font-medium uppercase tracking-wider">Average Rating</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200">
+<tr class="hover:bg-slate-50">
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-120 h-16 px-4 py-3 text-slate-500 text-sm">1</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Alpha</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-360 h-16 px-4 py-3 text-slate-500 text-sm">4.8 <span class="text-yellow-400">★★★★★</span></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-120 h-16 px-4 py-3 text-slate-500 text-sm">2</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Beta</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-360 h-16 px-4 py-3 text-slate-500 text-sm">4.5 <span class="text-yellow-400">★★★★</span><span class="text-slate-300">★</span></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-120 h-16 px-4 py-3 text-slate-500 text-sm">3</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Gamma</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-360 h-16 px-4 py-3 text-slate-500 text-sm">4.3 <span class="text-yellow-400">★★★★</span><span class="text-slate-300">★</span></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-120 h-16 px-4 py-3 text-slate-500 text-sm">4</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Delta</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-360 h-16 px-4 py-3 text-slate-500 text-sm">4.2 <span class="text-yellow-400">★★★★</span><span class="text-slate-300">★</span></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-120 h-16 px-4 py-3 text-slate-500 text-sm">5</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-240 h-16 px-4 py-3 text-slate-800 text-sm font-medium">Agent Epsilon</td>
+<td class="table-82b06adb-973c-4c88-8007-70b994898c2a-column-360 h-16 px-4 py-3 text-slate-500 text-sm">4.0 <span class="text-yellow-400">★★★★</span><span class="text-slate-300">★</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-slate-800 text-xl sm:text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2">Agent Activity Trends</h2>
+<div class="px-4 py-3">
+<div class="flex min-w-72 flex-1 flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg">
+<p class="text-slate-800 text-base font-medium leading-normal">Agent Usage Over Time</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 text-4xl font-bold leading-tight truncate">1,845</p>
+<p class="text-green-600 text-sm font-semibold leading-normal flex items-center">
+<svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.56l-2.22 2.22a.75.75 0 11-1.06-1.06l3.5-3.5a.75.75 0 011.06 0l3.5 3.5a.75.75 0 01-1.06 1.06L10.75 5.56v10.69A.75.75 0 0110 17z" fill-rule="evenodd"></path> </svg>
+                     +15%
+                  </p>
+</div>
+<p class="text-slate-500 text-sm font-normal leading-normal">vs Last 30 Days</p>
+<div class="flex min-h-[200px] flex-1 flex-col gap-6 py-4">
+<svg fill="none" height="180" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_1131_5935_updated)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#2563eb" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1131_5935_updated" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#dbeafe"></stop>
+<stop offset="1" stop-color="#dbeafe" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-around">
+<p class="text-slate-500 text-xs font-medium">Jan</p>
+<p class="text-slate-500 text-xs font-medium">Feb</p>
+<p class="text-slate-500 text-xs font-medium">Mar</p>
+<p class="text-slate-500 text-xs font-medium">Apr</p>
+<p class="text-slate-500 text-xs font-medium">May</p>
+<p class="text-slate-500 text-xs font-medium">Jun</p>
+<p class="text-slate-500 text-xs font-medium">Jul</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-slate-800 text-xl sm:text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2">Popular Agent Recommendations</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden pb-4">
+<div class="flex items-stretch p-4 gap-4 sm:gap-6">
+<div class="flex flex-col gap-3 rounded-xl bg-white border border-slate-200 shadow-lg overflow-hidden min-w-[200px] sm:min-w-[240px] transform hover:scale-105 transition-transform duration-200">
+<div class="w-full aspect-video bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCExkOpa24smOBNNdspN8eJeUg4dRhBABXgGka-ojeSLOTveTgTUQ-9HbgeOw7gaTSsMgwcqLMIJK7_h71NZItTdZwgK2FNGsXxw5AvihEuTlFp6looFZprIsUwnoEYFBzHxunxZambPvCzDD34JUtQuv4uk7D4iCOiP5-eE24Nq0ixyjOIoXclFhlYVpLCmSwUTGF5KHVUBOeAVrk8KUZA0c2jpwnhuVyxoRK-2Iubl2UvCZJeAgzqNLCX6rCd6OkyDW72H7YZHcf4");'></div>
+<div class="p-4">
+<p class="text-slate-800 text-base font-semibold leading-normal">Agent Alpha</p>
+<p class="text-slate-500 text-sm font-normal leading-normal mt-1">Highly rated agent for data analysis and complex problem solving.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white border border-slate-200 shadow-lg overflow-hidden min-w-[200px] sm:min-w-[240px] transform hover:scale-105 transition-transform duration-200">
+<div class="w-full aspect-video bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAZifePEkrQ8jBRZYwyko-G8aO2daaXJlnT5tJCc5IYpTmekt-1LLUuTKu3yuoC_V_hT0bf7CpcVgF-P4cTSDbOPwQcvIcno2JJvRos5EbZtbCD3hAwQtJsLxXRdBEbqH37j3cDpFfMHSBrDpYYctjBBo8wQUQUOtj7Kkjy0GKO7emyVf9zg8WuXAaaGBXtFvCf5owkTY1jCOxu2Qd84mIGByFusP5e3HF_8Oy5At4LlH-nV9PZSyaerk0par_CKm0Rzx-p68QtXYf");'></div>
+<div class="p-4">
+<p class="text-slate-800 text-base font-semibold leading-normal">Agent Beta</p>
+<p class="text-slate-500 text-sm font-normal leading-normal mt-1">Versatile agent for task automation and workflow optimization.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white border border-slate-200 shadow-lg overflow-hidden min-w-[200px] sm:min-w-[240px] transform hover:scale-105 transition-transform duration-200">
+<div class="w-full aspect-video bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP6EfKgZQuL5hiuZxw_341Re0S0O_U6Tfdiw-gP26uy3lLMWkpvpN0R3JiWiieAYdWVYNjNOsu68wV6JNnESdve-dZIpLzYeToebFGkrfBZlesCNg9XvQNIlTBiiGxx7J6yK_jpZC7McASxZmPHq-rIZ0JAzdF6YOmrb60cjaKGXeVSE86n6UcOvNyb7hrMVM3INEkWhgQEWng-xu_aZuuDfiV7Ea7cbWoPqtYb79s74Ef9xEWQGwfm7HOzc2lY-k231v-SJe4wufk");'></div>
+<div class="p-4">
+<p class="text-slate-800 text-base font-semibold leading-normal">Agent Gamma</p>
+<p class="text-slate-500 text-sm font-normal leading-normal mt-1">Specialized agent for customer support and communication tasks.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

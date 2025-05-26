@@ -1,0 +1,207 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-slate-100">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="flex flex-col w-64 bg-white border-r border-slate-200 p-4 space-y-6">
+<div class="text-2xl font-bold text-blue-600">Agent Platform</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" href="#">
+<span class="material-icons text-slate-600">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" href="#">
+<span class="material-icons text-slate-600">smart_toy</span>
+<span class="text-sm font-medium">Agents</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" href="#">
+<span class="material-icons text-slate-600">developer_board</span>
+<span class="text-sm font-medium">Hardware</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-blue-600 bg-blue-50 rounded-lg transition-colors" href="#">
+<span class="material-icons text-blue-600">group</span>
+<span class="text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" href="#">
+<span class="material-icons text-slate-600">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 p-8 space-y-6">
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h1 class="text-3xl font-bold text-slate-800">User Management</h1>
+<p class="text-slate-500 text-sm">Manage user accounts, permissions, and activity.</p>
+</div>
+<button class="flex items-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg shadow-sm hover:bg-blue-700 transition-colors">
+<span class="material-icons text-white text-lg">add</span>
+<span class="text-sm font-medium">Add User</span>
+</button>
+</header>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="relative flex w-full items-center col-span-1 md:col-span-2">
+<span class="material-icons absolute left-3 text-slate-400">search</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-300 bg-white h-11 placeholder:text-slate-400 px-4 pl-10 text-sm font-normal leading-normal" placeholder="Search by User ID, Username, or Email..." value=""/>
+</div>
+<div class="relative flex items-center">
+<span class="material-icons absolute left-3 text-slate-400">filter_list</span>
+<select class="form-select w-full pl-10 pr-3 py-2.5 rounded-lg border border-slate-300 text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+<option value="">Filter by Status</option>
+<option value="active">Active</option>
+<option value="inactive">Inactive</option>
+<option value="pending">Pending</option>
+</select>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full table-auto">
+<thead>
+<tr class="border-b border-slate-200 bg-slate-50">
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">User ID</th>
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">Username</th>
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">Email</th>
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">Registration Date</th>
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">Membership Level</th>
+<th class="px-4 py-3 text-center text-slate-600 text-xs font-semibold uppercase tracking-wider">Hardware Count</th>
+<th class="px-4 py-3 text-center text-slate-600 text-xs font-semibold uppercase tracking-wider">Agent Count</th>
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">Account Status</th>
+<th class="px-4 py-3 text-left text-slate-600 text-xs font-semibold uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-slate-500 text-sm font-mono">USR-001</td>
+<td class="px-4 py-3.5 text-slate-800 text-sm">Ethan Carter</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">ethan.carter@example.com</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">2023-01-15</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">Premium</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">3</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">5</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"> Active </span>
+</td>
+<td class="px-4 py-3.5 text-sm">
+<div class="flex items-center gap-2">
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="View Details">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="Edit User">
+<span class="material-icons text-lg">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-slate-500 text-sm font-mono">USR-002</td>
+<td class="px-4 py-3.5 text-slate-800 text-sm">Olivia Bennett</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">olivia.bennett@example.com</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">2023-02-20</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">Standard</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">1</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">2</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"> Active </span>
+</td>
+<td class="px-4 py-3.5 text-sm">
+<div class="flex items-center gap-2">
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="View Details">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="Edit User">
+<span class="material-icons text-lg">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-slate-500 text-sm font-mono">USR-003</td>
+<td class="px-4 py-3.5 text-slate-800 text-sm">Noah Harper</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">noah.harper@example.com</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">2023-03-10</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">Basic</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">0</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">1</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"> Inactive </span>
+</td>
+<td class="px-4 py-3.5 text-sm">
+<div class="flex items-center gap-2">
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="View Details">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="Edit User">
+<span class="material-icons text-lg">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-slate-500 text-sm font-mono">USR-004</td>
+<td class="px-4 py-3.5 text-slate-800 text-sm">Ava Foster</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">ava.foster@example.com</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">2023-04-05</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">Premium</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">5</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">8</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"> Active </span>
+</td>
+<td class="px-4 py-3.5 text-sm">
+<div class="flex items-center gap-2">
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="View Details">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="Edit User">
+<span class="material-icons text-lg">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-4 py-3.5 text-slate-500 text-sm font-mono">USR-005</td>
+<td class="px-4 py-3.5 text-slate-800 text-sm">Liam Parker</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">liam.parker@example.com</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">2023-05-12</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm">Standard</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">2</td>
+<td class="px-4 py-3.5 text-slate-500 text-sm text-center">3</td>
+<td class="px-4 py-3.5 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"> Pending </span>
+</td>
+<td class="px-4 py-3.5 text-sm">
+<div class="flex items-center gap-2">
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="View Details">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="text-slate-500 hover:text-blue-600 transition-colors" title="Edit User">
+<span class="material-icons text-lg">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center mt-6 pt-4 border-t border-slate-200 gap-4">
+<p class="text-sm text-slate-500">Showing <span class="font-medium">1</span> to <span class="font-medium">5</span> of <span class="font-medium">25</span> results</p>
+<div class="flex gap-1">
+<button class="px-3 py-1.5 text-sm font-medium text-slate-600 bg-white border border-slate-300 rounded-md hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled="">Previous</button>
+<button class="px-3 py-1.5 text-sm font-medium text-slate-600 bg-white border border-slate-300 rounded-md hover:bg-slate-50">Next</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body></html>
