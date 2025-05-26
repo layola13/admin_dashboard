@@ -1,0 +1,202 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-slate-50">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="flex flex-col w-64 bg-white border-r border-slate-200 p-4 sticky top-0 h-screen">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-icons-outlined text-3xl text-blue-600">memory</span>
+<h1 class="text-slate-900 text-xl font-semibold">AI Platform</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 hover:text-blue-600 rounded-lg transition-colors" href="#">
+<span class="material-icons-outlined">home</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 hover:text-blue-600 rounded-lg transition-colors" href="#">
+<span class="material-icons-outlined">smart_toy</span>
+<span class="text-sm font-medium">Agents</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 hover:text-blue-600 rounded-lg transition-colors" href="#">
+<span class="material-icons-outlined">developer_board</span>
+<span class="text-sm font-medium">Hardware</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 hover:text-blue-600 rounded-lg transition-colors" href="#">
+<span class="material-icons-outlined">group</span>
+<span class="text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-blue-50 text-blue-600 rounded-lg transition-colors" href="#">
+<span class="material-icons-outlined">monitor_heart</span>
+<span class="text-sm font-medium">System Monitoring</span>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-700 hover:bg-slate-100 hover:text-blue-600 rounded-lg transition-colors" href="#">
+<span class="material-icons-outlined">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8">
+<h1 class="text-slate-900 text-3xl font-bold leading-tight">System Monitoring</h1>
+</header>
+<section class="mb-8">
+<h2 class="text-slate-800 text-xl font-semibold leading-tight tracking-tight mb-4">Server Resource Usage</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-slate-700 text-base font-medium">CPU Usage</p>
+<span class="material-icons-outlined text-slate-400">more_horiz</span>
+</div>
+<p class="text-slate-900 text-4xl font-bold leading-tight">75%</p>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-outlined text-green-500 text-sm">arrow_upward</span>
+<p class="text-green-500 text-sm font-medium">+5%</p>
+<p class="text-slate-500 text-sm">vs Last 24 Hours</p>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="148" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#cpu_gradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0b80ee" stroke-linecap="round" stroke-width="2.5"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="cpu_gradient" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#0b80ee" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#0b80ee" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-around">
+<p class="text-slate-500 text-xs font-medium">12AM</p>
+<p class="text-slate-500 text-xs font-medium">6AM</p>
+<p class="text-slate-500 text-xs font-medium">12PM</p>
+<p class="text-slate-500 text-xs font-medium">6PM</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-slate-700 text-base font-medium">Memory Usage</p>
+<span class="material-icons-outlined text-slate-400">more_horiz</span>
+</div>
+<p class="text-slate-900 text-4xl font-bold leading-tight">60%</p>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-outlined text-red-500 text-sm">arrow_downward</span>
+<p class="text-red-500 text-sm font-medium">-2%</p>
+<p class="text-slate-500 text-sm">vs Last 24 Hours</p>
+</div>
+<div class="grid min-h-[180px] grid-flow-col gap-4 grid-rows-[1fr_auto] items-end justify-items-center px-3 py-4">
+<div class="bg-blue-500 rounded-t w-full" style="height: 10%;"></div>
+<p class="text-slate-500 text-xs font-medium">12AM</p>
+<div class="bg-blue-500 rounded-t w-full" style="height: 50%;"></div>
+<p class="text-slate-500 text-xs font-medium">6AM</p>
+<div class="bg-blue-500 rounded-t w-full" style="height: 30%;"></div>
+<p class="text-slate-500 text-xs font-medium">12PM</p>
+<div class="bg-blue-500 rounded-t w-full" style="height: 70%;"></div>
+<p class="text-slate-500 text-xs font-medium">6PM</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-slate-800 text-xl font-semibold leading-tight tracking-tight mb-4">API Response Time</h2>
+<div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-slate-700 text-base font-medium">Average Response Time</p>
+<span class="material-icons-outlined text-slate-400">more_horiz</span>
+</div>
+<p class="text-slate-900 text-4xl font-bold leading-tight">250ms</p>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-outlined text-red-500 text-sm">arrow_downward</span>
+<p class="text-red-500 text-sm font-medium">-10%</p>
+<p class="text-slate-500 text-sm">vs Last 24 Hours</p>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="148" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#api_gradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0b80ee" stroke-linecap="round" stroke-width="2.5"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="api_gradient" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#0b80ee" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#0b80ee" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-around">
+<p class="text-slate-500 text-xs font-medium">12AM</p>
+<p class="text-slate-500 text-xs font-medium">6AM</p>
+<p class="text-slate-500 text-xs font-medium">12PM</p>
+<p class="text-slate-500 text-xs font-medium">6PM</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-slate-800 text-xl font-semibold leading-tight tracking-tight mb-4">Error Logs</h2>
+<div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+<table class="w-full">
+<thead class="bg-slate-50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Timestamp</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Level</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Message</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">2024-01-15 10:00:00</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Error</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Failed to connect to database</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">2024-01-15 10:05:00</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Warning</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">High CPU usage detected</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">2024-01-15 10:10:00</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Info</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">API request received</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">2024-01-15 10:15:00</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Error</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Invalid API key</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">2024-01-15 10:20:00</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Info</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Agent deployed successfully</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+
+<div style="position: fixed; bottom: 10px; left: 10px; right: 10px; background-color: #f0f0f0; padding: 10px; border-top: 1px solid #ccc; display: flex; justify-content: space-between; z-index: 1000;">
+  <a href="page_14.html" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Previous</a>
+  <a href="#" style="padding: 10px 20px; background-color: #ccc; color: #666; text-decoration: none; border-radius: 5px; cursor: not-allowed;">Next</a>
+</div>
+</body></html>
